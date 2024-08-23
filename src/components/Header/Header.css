@@ -1,16 +1,22 @@
-.loginButton{
-    border: none;
-    background-color: white;
-    font-size: 20px;
 
-}
 
 .regButton{
     border: none;
-    background-color: white;
-    font-size: 20px;
+    background-color: #1A237E;
+    font-size: 18px;
     margin-left: 20px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 5px;
+    color: #FFFFFF;
+    border: 2px solid #FF7043;
 }
+
+.regButton:hover {
+    background-color: #3949AB; 
+    border-color: #FF7043; 
+  }
 
 .headerContainer{
     display: flex;
@@ -24,6 +30,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    color: #FF7043;
+    text-decoration: none;
 }
 
 Link {

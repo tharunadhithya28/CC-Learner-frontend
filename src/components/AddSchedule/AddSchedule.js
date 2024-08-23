@@ -17,7 +17,7 @@ const AddSchedule = () => {
 
       
     
-      // Handle input change
+     
       const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -26,7 +26,7 @@ const AddSchedule = () => {
         });
       };
     
-      // Handle form submission
+    
       const handleSubmit = async (e) => {
         e.preventDefault();
         try {

@@ -1,4 +1,4 @@
-// AuthContext.js
+
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import Cookies from 'js-cookie';
 
@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const token = Cookies.get('token');
-    const role = Cookies.get('role'); // Get role from cookies if available
+    const role = Cookies.get('role'); 
     const id = Cookies.get('id');
     setIsAuthenticated(!!token); 
     setUserRole(role);
@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = (token, role, _id) => {
     Cookies.set('token', token, { expires: 7 });
-    Cookies.set('role', role, { expires: 7 }); // Store role in cookies
+    Cookies.set('role', role, { expires: 7 }); 
     Cookies.set('id', _id , {expires : 7});
     setIsAuthenticated(true);
     setUserRole(role);
@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = (token, role,_id) => {
     Cookies.set('token', token, { expires: 7 });
-    Cookies.set('role', role, { expires: 7 }); // Store role in cookies
+    Cookies.set('role', role, { expires: 7 }); 
     Cookies.set('id',_id,{ expires: 7 });
     setIsAuthenticated(true);
     setUserRole(role);

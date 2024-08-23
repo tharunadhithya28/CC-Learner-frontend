@@ -10,7 +10,6 @@ const MentorDisplay = () => {
 
   
 
-  // Fetch mentors from the backend
   useEffect(() => {
     const fetchMentors = async () => {
       try {
@@ -33,23 +32,22 @@ const MentorDisplay = () => {
       const datePattern = /^\d{4}-\d{2}-\d{2}$/;
     let formattedDate = mentor.date;
 
-    // If date is not in YYYY-MM-DD format, try to correct it
+
     if (!datePattern.test(mentor.date)) {
       const dateObj = new Date(mentor.date);
-      formattedDate = dateObj.toISOString().split('T')[0]; // Convert to YYYY-MM-DD
-      console.log("Formatted date:", formattedDate); // Log formatted date
+      formattedDate = dateObj.toISOString().split('T')[0]; 
+      console.log("Formatted date:", formattedDate); 
     }
 
-    // Combine date and time to create valid ISO date-time strings
-    const startTimeStr = `${formattedDate}T${mentor.startTime}:00`; // Adding ":00" for seconds
+   
+    const startTimeStr = `${formattedDate}T${mentor.startTime}:00`; 
     const endTimeStr = `${formattedDate}T${mentor.endTime}:00`;
 
-    console.log("startTimeStr:", startTimeStr); // Log startTimeStr
-    console.log("endTimeStr:", endTimeStr); // Log endTimeStr
-
+    console.log("startTimeStr:", startTimeStr); 
+    console.log("endTimeStr:", endTimeStr); 
     const adjustToUTC = (date) => {
-      const offset = date.getTimezoneOffset() * 60000; // Get offset in milliseconds
-      return new Date(date.getTime() - offset); // Adjust date to UTC
+      const offset = date.getTimezoneOffset() * 60000; 
+      return new Date(date.getTime() - offset); 
     };
     
 
@@ -58,10 +56,10 @@ const MentorDisplay = () => {
     const startTime = adjustToUTC(new Date(startTimeStr));
 const endTime = adjustToUTC(new Date(endTimeStr));
 
-    console.log("startTime:", startTime); // Log startTime
-    console.log("endTime:", endTime); // Log endTime
+    console.log("startTime:", startTime); 
+    console.log("endTime:", endTime); 
 
-    // Check if the date construction fails
+   
     if (isNaN(startTime.getTime()) || isNaN(endTime.getTime())) {
       throw new Error('Invalid date or time');
     }
@@ -69,8 +67,8 @@ const endTime = adjustToUTC(new Date(endTimeStr));
 
     
       
-      // Replace with actual student ID
-      const studentId = user// You need to get the actual student ID from context or state
+    
+      const studentId = user
       const bookingData = {
         student: studentId,
         mentor: mentor._id,
@@ -89,7 +87,7 @@ const endTime = adjustToUTC(new Date(endTimeStr));
       console.log("after axios");
       
       
-      // window.location.href = '/payment'; // Navigate to the payment page
+     
     } catch (error) {
       console.error('Error creating booking:', error);
       alert('Booking failed, please try again.');
@@ -114,7 +112,7 @@ const endTime = adjustToUTC(new Date(endTimeStr));
               {userRole === 'student' && (
                 <button 
                 className='bookButton' 
-                onClick={() => handleBook(mentor)} // Pass the mentor ID to the payment page
+                onClick={() => handleBook(mentor)} 
               >
                 Book
               </button>

@@ -27,16 +27,16 @@ const Login = () => {
 
       const { token, role,_id } = response.data;
 
-      // Call login function from AuthContext
+     
       login(token, role,_id);
 
-      // Navigate based on user role
+     
       if (role === 'student') {
         navigate('/student');
       } else if (role === 'mentor') {
         navigate('/mentor');
       } else {
-        navigate('/'); // Fallback or default page
+        navigate('/'); 
       }
     } catch (error) {
       console.error('Login failed:', error.response?.data || error.message);

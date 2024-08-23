@@ -9,7 +9,7 @@ const BookingPage = () => {
   const{user} = useAuth();
   console.log(user);
 
-  // Fetch bookings from the backend
+  
   useEffect(() => {
     const fetchBookings = async () => {
       try {
@@ -17,7 +17,7 @@ const BookingPage = () => {
         const response = await axios.get(`http://localhost:5000/api/booking/student/${user}`);
         console.log(response);
         
-        setBookings(response.data); // Assuming the response contains an array of bookings
+        setBookings(response.data); 
       } catch (error) {
         console.error('Error fetching bookings:', error);
       }

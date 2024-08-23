@@ -26,16 +26,16 @@ const Register = () => {
       console.log(response);
       const { token, role: userRole , _id} = response.data;
 
-      // Call login function from AuthContext
+    
       register(token, userRole, _id);
 
-      // Navigate based on user role
+     
       if (userRole === 'student') {
         navigate('/student');
       } else if (userRole === 'mentor') {
         navigate('/mentor');
       } else {
-        navigate('/'); // Fallback or default page
+        navigate('/'); 
       }
     } catch (error) {
       console.error('Registration failed:', error.response?.data || error.message);
