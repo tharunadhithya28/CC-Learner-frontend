@@ -4,6 +4,7 @@ import Header from '../Header/Header'
 import "../MentorPage/MentorPage.css"
 
 const Student = () => {
+    
   return (
     <div className='mentorPageContainer'>
         <header>
@@ -16,7 +17,7 @@ const Student = () => {
                 <h2> Empower your learning journey with personalized mentorship—connect, book, and excel with our expert mentors.</h2>
                     <h2> Want to Schedule a session with Mentor? </h2>
                     <div>
-                        <Link to="http://localhost:3000/student/availablementors"> <button className='addButton'> Book a Session </button> </Link>
+                        <Link to="/student/availablementors"> <button className='addButton'> Book a Session </button> </Link>
                     </div>
                     
                 </div>

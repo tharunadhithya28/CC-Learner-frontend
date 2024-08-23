@@ -19,7 +19,7 @@ const MentorPage = () => {
                     <h2> Share your expertise and guide eager learners—create impactful connections and inspire success through our mentoring platform.</h2>
                     <h2> Available to teach a student? Add your Availability here </h2>
                     <div>
-                        <Link to="http://localhost:3000/mentor/addschedule">
+                        <Link to="/mentor/addschedule">
                         <button className='addButton'> Add a Schedule  </button>
                         </Link>
                        

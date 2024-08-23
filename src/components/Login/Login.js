@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/user/login', {
+      const response = await axios.post('https://cc-learner-backend-1.onrender.com/api/user/login', {
         email,
         password,
       });
@@ -65,7 +65,7 @@ const Login = () => {
                 <div className='submitBox'>
                     <button className='addButton' type="submit"> Submit </button>
                 </div>
-                <small> New? <Link to="http://localhost:3000/register"> <span style={{color:"red"}}> Register </span>
+                <small> New? <Link to="/register"> <span style={{color:"red"}}> Register </span>
                 </Link></small>
             </form>
         </div>

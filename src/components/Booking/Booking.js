@@ -14,7 +14,7 @@ const BookingPage = () => {
     const fetchBookings = async () => {
       try {
         
-        const response = await axios.get(`http://localhost:5000/api/booking/student/${user}`);
+        const response = await axios.get(`https://cc-learner-backend-1.onrender.com/api/booking/student/${user}`);
         console.log(response);
         
         setBookings(response.data); 

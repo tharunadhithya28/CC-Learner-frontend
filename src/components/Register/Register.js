@@ -16,7 +16,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/user/register', {
+      const response = await axios.post('https://cc-learner-backend-1.onrender.com/api/user/register', {
         name,
         password,
         email,

@@ -30,7 +30,7 @@ const AddSchedule = () => {
       const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          const response = await axios.post('http://localhost:5000/api/mentor/', formData);
+          const response = await axios.post('https://cc-learner-backend-1.onrender.com/api/mentor/', formData);
           console.log('Data submitted successfully:', response.data);
           setFormData({
             name: '',
@@ -97,7 +97,7 @@ const AddSchedule = () => {
                     <button className='addButton' type='submit'> Add </button>
                 </div>
                 <div>
-                    <Link to="http://localhost:3000/student/availablementors"> <button className='addButton' type='submit'> Scheduled </button> </Link>
+                    <Link to="/student/availablementors"> <button className='addButton' type='submit'> Scheduled </button> </Link>
                 
                 </div>
             </form>

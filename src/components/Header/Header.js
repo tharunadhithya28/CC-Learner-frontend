@@ -18,7 +18,7 @@ const Header = () => {
   return (
 
     <div className='headerContainer'> 
-    <Link  to={userRole === 'student' ? "http://localhost:3000/student" : "http://localhost:3000/mentor"} > 
+    <Link  to={userRole === 'student' ? "/student" : "/mentor"} > 
     <div className='titleDesign'>
           <div>
           <SiStudyverse size="30px"/>

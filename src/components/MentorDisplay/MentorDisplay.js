@@ -13,7 +13,7 @@ const MentorDisplay = () => {
   useEffect(() => {
     const fetchMentors = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/mentor/');
+        const response = await axios.get('https://cc-learner-backend-1.onrender.com/api/mentor/');
         console.log(response.data);
         
         const availableMentors = response.data.filter(mentor => !mentor.isBooked);
@@ -81,7 +81,7 @@ const endTime = adjustToUTC(new Date(endTimeStr));
       console.log("after booking data");
       
 
-      await axios.post('http://localhost:5000/api/booking', bookingData);
+      await axios.post('https://cc-learner-backend-1.onrender.com/api/booking', bookingData);
       setMentors(prevMentors => prevMentors.filter(m => m._id !== mentor._id));
 
       console.log("after axios");
