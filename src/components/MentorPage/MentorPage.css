@@ -1,0 +1,9 @@
+.layoutContainer{
+    display: flex;
+
+}
+
+.mentorPageTitle{
+    padding: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

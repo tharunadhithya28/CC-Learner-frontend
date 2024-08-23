@@ -1,0 +1,46 @@
+.formContainer{
+    background-color: rgb(238, 247, 255);
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+    font-size: 16px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    z-index: 2;
+    border-radius: 15px;
+}
+
+.emailBox{
+    margin: 25px;
+}
+
+.inputBox{
+    width: 200px;
+}
+
+.submitBox{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.loginContainer{
+    background-image: url("https://img.freepik.com/free-photo/student-class-looking-course_23-2148888810.jpg?t=st=1724320005~exp=1724323605~hmac=67b7aac828c5fb701f7454be44c0ddfe0817576f15bda136b60895f230a8d0e9&w=1380");
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginContainer::before{
+    content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px); /* Adjust the blur level here */
+  z-index: 1; /* Ensure it stays behind the form content */
+}

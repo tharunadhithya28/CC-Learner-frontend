@@ -1,0 +1,32 @@
+.loginButton{
+    border: none;
+    background-color: white;
+    font-size: 20px;
+
+}
+
+.regButton{
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.headerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.titleDesign{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+Link {
+    color: #1a73e8; 
+    text-decoration: none; 
+  }

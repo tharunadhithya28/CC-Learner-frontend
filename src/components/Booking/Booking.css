@@ -1,0 +1,38 @@
+/* Container for the list of bookings */
+
+  
+  /* Container for individual booking cards */
+  .bookingListContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between each booking card */
+  }
+  
+  /* Style for each booking card */
+  .bookingCard {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for booking cards */
+  .bookingCard:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Style for booking details */
+  .bookingCard p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Emphasize the labels */
+  .bookingCard p strong {
+    color: #555;
+  }
+  
